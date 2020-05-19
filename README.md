@@ -2,8 +2,9 @@
 Sample AWS ECS Windows Cloud Formation templates
 
 1. Create Elastic Container Repository
-2. Create ECS Cluster
-3. Create Task and Service
+2. Build and push your container image to ECR
+3. Create ECS Cluster
+4. Create Task and Service
 
 Pl. note the above can be combined into a single template if required.  
 
