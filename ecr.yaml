@@ -1,0 +1,20 @@
+# aws cloudformation create-stack \
+# --template-body file://ecr.yaml \
+# --stack-name test-ecr \
+# --parameters \
+# ParameterKey=RepositoryName,ParameterValue=test-ecr
+
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+    RepositoryName:
+        Description: Name of the ECR Repository
+        Type: String
+
+Resources:
+
+  MyRepository: 
+    Type: AWS::ECR::Repository
+    Properties: 
+      RepositoryName: !Ref RepositoryName
+
